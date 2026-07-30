@@ -118,7 +118,7 @@ def cadastrarNovoProduto(nomeProduto, valorUnitario, categoria,unidadeMedida, qu
         return "Categoria Inválida"
 
     if not unidadeMedida or not unidadeMedida.strip():
-        unMedida = "NULL"
+        unMedida = None
 
     if not quantidadeProduto:
         qtdProduto=0
@@ -138,6 +138,7 @@ def cadastrarNovoProduto(nomeProduto, valorUnitario, categoria,unidadeMedida, qu
         """
 
         cursor.execute(comando_sql,valores)
+		cursor.commit()
 
         return "Valores Inseridos com Sucesso"
 
@@ -161,7 +162,7 @@ def registrarEntradas(idProduto,dataEntrada,quantidadeEntrada):
     if idProduto>quantidadeProdutos or idProduto<=0:
         return "Id Inválido"
 
-    if not quantidadeEntrada  or not quantidadeEntrada.strip() or quantidadeEntrada>100 or quantidadeEntrada<=0  :
+    if quantidadeEntrada>100 or quantidadeEntrada<=0  :
         return "Quantidade Inválida"
 
     try: 
@@ -176,6 +177,7 @@ def registrarEntradas(idProduto,dataEntrada,quantidadeEntrada):
         valores = (idProduto,dataEntrada,quantidadeEntrada)
 
         cursor.execute(comando_sql,valores)
+		cursor.commit()
 
         return "Valores inseridos com sucesso"
 
@@ -189,7 +191,7 @@ def registrarEntradas(idProduto,dataEntrada,quantidadeEntrada):
 
 def listarProdutosLimite():
     conexao = criarConexao()
-    cursor = conexao.close()
+    cursor = conexao.cursor()
 
     try:
         comando_sql="""
@@ -207,7 +209,7 @@ def listarProdutosLimite():
 
         listaProdutos = []
 
-        for produto in produto:
+        for produto in produtos:
             listaProdutos.append({
                 "nome_produto":produto[0],
                 "quantidade":produto[1],
@@ -237,14 +239,14 @@ def listarVolumeSaida():
 			from saidas
             inner join produtos
             on produtos.id_produto = saidas.id_produto
-			group by saidas.id_produto
+			group by saidas.id_produto, produtos.nome_produto
             order by COUNT(*) DESC LIMIT 3;
         
         """
 
         cursor.execute(comando_sql)
 
-        volumeSaida = cursor.fatchall()
+        volumeSaida = cursor.fetchall()
 
         listaVolumeSaida = []
 
