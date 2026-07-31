@@ -1,5 +1,6 @@
 import mysql.connector  
 
+
 def criarConexao():
     conexao = mysql.connector.connect(
         host = "localhost",

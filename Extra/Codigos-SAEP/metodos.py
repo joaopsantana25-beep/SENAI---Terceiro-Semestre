@@ -1,4 +1,4 @@
-import mysql
+import mysql 
 from conexao import criarConexao
 
 
@@ -138,7 +138,7 @@ def cadastrarNovoProduto(nomeProduto, valorUnitario, categoria,unidadeMedida, qu
         """
 
         cursor.execute(comando_sql,valores)
-		cursor.commit()
+        conexao.commit()
 
         return "Valores Inseridos com Sucesso"
 
@@ -177,7 +177,7 @@ def registrarEntradas(idProduto,dataEntrada,quantidadeEntrada):
         valores = (idProduto,dataEntrada,quantidadeEntrada)
 
         cursor.execute(comando_sql,valores)
-		cursor.commit()
+        conexao.commit()
 
         return "Valores inseridos com sucesso"
 
@@ -216,7 +216,10 @@ def listarProdutosLimite():
                 "percentual":produto[2]
             })
 
-        return listaProdutos
+        if listaProdutos:
+            return listaProdutos
+        else:
+            return {"mensagem":"Nenhum produto está no limite"}
 
     except Exception as erro:
         return "Erro ao carregar tabela"

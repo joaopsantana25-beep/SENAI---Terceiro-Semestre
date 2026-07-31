@@ -21,19 +21,12 @@ def listarSaidas():
 
 @router.get("/produtos/limiteEstoque")
 def limiteEstoque():
-    try: 
-        return metodos.listarProdutosLimite()
+    return metodos.listarProdutosLimite()
 
-    except Exception as erro:
-        return{"mensagem": "Nenhum produto está no limite"}
-
+    
 @router.get("/saidas/volumeSaida")
 def volumeSaida():
-    try:
         return metodos.listarVolumeSaida()
-
-    except Exception as erro:
-        return {"mensagem": "Erro ao carregar a tabela"}
 
 @router.post("/produtos/cadastrar")
 def cadastrarProduto(nomeProduto:str,valorUnitario:float,categoria:str,unidadeMedida:str,quantidadeProduto:int):
