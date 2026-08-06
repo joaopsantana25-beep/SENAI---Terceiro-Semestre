@@ -16,7 +16,9 @@ A sintaxe básica de uma lista é:
 E os dados da lista ficam dentro de colchetes [] e separa cada item com vírgulas
 
 Para acessar a lista é preciso usar o conceito de index;
+
 *alunos[0]
+
 *alunos[1]
 
 Os principais métodos e listas são:
@@ -24,10 +26,15 @@ Os principais métodos e listas são:
 1. Para adicionar ou remover itens
 
 *push() = Adiciona um item no final do elemento
+
 *pop() = Remove o ultimo elemento
+
 *shift() = Remove o primeiro elemento da lista
+
 *unshift() = Adiciona um elemento no começo da lista
+
 *splice() =  Pode adicionar ou remover elementos em qualquer posição da lista
+
 *length() = Conta quantos itens tem dentro da lista
 
 2. 
