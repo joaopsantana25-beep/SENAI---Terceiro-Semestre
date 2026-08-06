@@ -23,7 +23,7 @@ Para acessar a lista é preciso usar o conceito de index;
 
 Os principais métodos e listas são:
 
-1. Para adicionar ou remover itens
+1. Para adicionar ou remover itens<br>
 
 *push() = Adiciona um item no final do elemento
 
@@ -37,4 +37,16 @@ Os principais métodos e listas são:
 
 *length() = Conta quantos itens tem dentro da lista
 
-2. 
+2. Para transformar ou Filtrar<br>
+
+*map():Cria uma nova lista aplicando uma função a cada item
+
+*filter(): Cria uma nova lista apenas com os itens que passam em um teste
+
+*reduce(): Reduz uma lista a um único valor
+
+*find(): retorna o primeiro item que satisfaz uma condição
+
+*findIndex(): retorna o indice desse primeiro item
+
+*includes(): Verifica se a lista contém um determinado valor (True ou False)

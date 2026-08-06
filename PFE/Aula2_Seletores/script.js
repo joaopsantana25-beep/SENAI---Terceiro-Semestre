@@ -12,3 +12,5 @@ for (let carro of carrinhos){
 for (let pessoa of pessoas){
     console.log(pessoa.nome);
 }
+
+console.log(pessoas.find(p => p.idade<25));
