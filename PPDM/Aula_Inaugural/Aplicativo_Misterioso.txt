@@ -1,0 +1,16 @@
+Qual problema ele resolve?
+Ele ajuda na comunicação entre pessoas, como dentro de empresas e escolas
+
+Quais dados o usuário informa?
+Ele informa o nome, seus dados pessoais e em qual instituição ele participa
+
+O que o aplicativo faz com esses dados?
+O aplicativo cria canais de comunicação com o usuário e instituições,
+
+Qual resultado ele mostra?
+O aplicativo mostra canais de tarefas, calendário, videochamadas e feed da instituição que o usuário pode participar e ver
+
+Quais recursos do celular utiliza?
+Ele utiliza coisas como microfone, câmera, teclado, internet
+
+App: Teams
