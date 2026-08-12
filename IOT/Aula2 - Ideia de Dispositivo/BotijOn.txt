@@ -1,0 +1,24 @@
+Grupo: Eduardo Pereira, João Paulo, Thalles Vinicius
+
+Usuário Afetado: Segundo a pagina de notícia G1, cerca de 85% da população de São Paulo ainda depende de botijão de gás para cozinhar, o que representa mais de 13 milhões de domicílios, sendo que apenas 15% possuem gás encanado em casa e a média nacional é cerca de 1,6%.
+
+
+Contexto: Nesse contexto, é extremamente comum o gás acabar justamente na preparação de refeições, em especial, a janta que é em um horário mais avançado da noite, logo o usuário fica depende de um entregador que normalmente já está fora do horário de serviço e que resulta na falta da comida naquele santo dia que é uma incrível dor de cabeça.
+
+
+Pensando nisso, nós pensamos em uma solução para o problema. Uma plataforma onde o botijão será apoiado e a qual será responsável por monitorar a quantidade de combustível dentro do botijão e avisar para o usuário os níveis de gás disponível através de um aplicativo. Ao chegar em níveis baixos a plataforma envia uma notificação para o usuário que, agora avisado, pode entrar em contato com seu vendedor favorito para comprar um novo botijão, dessa forma evitando o empecilho que é acabar o gás com a comida no fogo.
+
+
+Trata-se de IoT ou IIoT?
+IoT por se tratar de uma solução mais simples que as características do IIoT
+
+Possíveis sensores envolvidos:
+Sensor de peso
+
+Forma de visualização ou ação:
+Aplicativo no celular que contém gráficos e informações sobre a porcentagem de gás restante no botijão e indicativo de nível
+
+Limitações e possíveis problemas:
+ - Problema de caso caia algo dentro da plataforma que mude o peso medido e altere o valor e resultado da medição
+ - Cliente confundir o uso do produto por achar que mede vazamento de gás
+ - Como o sistema não mede de forma direta o valor disponível de gás dentro do botijão, os resultados de nível de combustível são aproximados
