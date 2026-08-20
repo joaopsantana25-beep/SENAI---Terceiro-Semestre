@@ -1,0 +1,31 @@
+.produto{
+    border:1px solid gold;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,rgb(216, 106, 198),rgb(219, 98, 144))
+}
+
+.produto p{
+    color: rgb(255, 255, 255);
+    font-size:20 px;
+}
+
+.catalogo{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.catalogo h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: rgb(241, 216, 220);
+}
+
+body h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', cursive;
+}

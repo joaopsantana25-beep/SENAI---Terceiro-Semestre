@@ -23,7 +23,6 @@ botao.addEventListener("click",()=>{
         const li = document.createElement("li");
         li.innerText = produto;
         lista.appendChild(li);
-    })},
-    3000);
+        })}, 3000);
        
 })
