@@ -3,66 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Final</title>
     <link rel="stylesheet" href="estilo.css">
-
+    <title>Document</title>
 </head>
-
-
 <body>
 
-<h1>Cosméticos Flor</h1>
-
-<div id="sacola">
-    Sacola: <span id="contador">0</span> item(s)
-</div>
-
-<hr>
+    <input id="nomeProduto" placeholder="Digite o nome do produto">
+    <input id="precoProduto" placeholder="Digite o preco do produto">
+    <button id = "cadastrarProduto">Cadastrar</button>
 
 
+    <div id="vitrine"></div>
 
 
-<div class=catalogo id="catalogo">
-
-    <h2>Catálogo</h2>
-
-    <div class = "produto">
-        <h3>Creme Hidratante</h3>
-        <p>RS$ 29,99</p>
-        <button onclick=adicionarSacola()>Adicionar à Sacola</button>
-    </div>
-
-    <div class = "produto">
-        <h3>Base Líquida</h3>
-        <p>RS$ 44,99</p>
-        <button onclick=adicionarSacola()>Adicionar à Sacola</button>
-    </div>
-
-</div>
-
-<hr>
-
-<div class = adicionarProdutos id>
-<h2>Adicionar Produtos</h2>
-
-<input type = "text" id="nomeProduto" placeholder="Nome do produto">
-<input type = "number" id="precoProduto" placeholder="Preco">
-
-<button id = "Adicionar">Adicionar Produto</button>
-</div>
-
-<hr>
-
-<button onclick=mostrarCupom()>Mostrar Cupom</button>
-
-<div id="cupom">
-    <input type="password" id="campoCupom" placeholder="Digite o código do cupom">
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
-
-
 </html>

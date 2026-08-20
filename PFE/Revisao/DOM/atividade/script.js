@@ -1,13 +1,25 @@
-const produto = document.getElementById("nomeProduto")
-const preco = document.getElementById("precoProduto")
-const botaoAdicionar = document.getElementById("Adicionar")
-const catalogo = document.getElementById("catalogo")
+const botao = document.getElementById("cadastrarProduto")
+const vitrine = document.getElementById("vitrine")
 
-botaoAdicionar.addEventListener("click",()=>{
-    const nomeProduto = produto.value
-    const precoProduto = preco.value
+botao.addEventListener("click", ()=>{
+    const nomeProduto = document.getElementById("nomeProduto")
+    const precoProduto = document.getElementById("precoProduto")
+    const p = document.createElement("p")
 
-    if (nomeProduto && precoProduto){
-        catalogo.appendChild(nomeProduto);     
+
+    if(!nomeProduto.value || !precoProduto.value){
+        nomeProduto.value = ""
+        precoProduto.value = ""  
+        alert("Preencha todos os campos")  
+        return
     }
+
+    p.innerText=`Produto: ${nomeProduto.value} - R$ ${(Number(precoProduto.value)).toFixed(2)}`
+    p.classList.add("card")
+
+    vitrine.appendChild(p)
+
+    nomeProduto.value = ""
+    precoProduto.value = ""   
+   
 })
